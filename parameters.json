@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "prefix": {
+      "value": "azvmdemo"
+    },
+    "vmSize": {
+      "value": "Standard_B1s"
+    },
+    "adminUsername": {
+      "value": "azureuser"
+    },
+    "adminPublicKey": {
+      "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQ...replace_with_your_key"
+    },
+    "vnetAddressPrefix": {
+      "value": "10.0.0.0/16"
+    },
+    "subnetPrefix": {
+      "value": "10.0.1.0/24"
+    },
+    "allowSshFrom": {
+      "value": "0.0.0.0/0"
+    }
+  }
+}
