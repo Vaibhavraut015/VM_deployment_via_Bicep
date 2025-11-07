@@ -13,8 +13,6 @@ A hands-on project to deploy a **production-ready Linux VM** on Azure using **Bi
 
 > **Default OS**: Ubuntu 22.04 LTS (Gen2) with SSH key authentication (password login disabled).
 
----
-
 ## Prerequisites
 - Azure subscription
 - **Azure CLI** (2.58+). Install: https://learn.microsoft.com/cli/azure/install-azure-cli
