@@ -18,3 +18,4 @@ az deployment group create   --resource-group "$RG_NAME"   --template-file main.
 
 IP=$(az network public-ip list -g "$RG_NAME" --query "[0].ipAddress" -o tsv)
 echo "==> Deployment complete. Public IP: $IP"
+
