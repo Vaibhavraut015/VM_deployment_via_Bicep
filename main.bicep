@@ -10,11 +10,13 @@ param vmSize string = 'Standard_B1s'
 @description('Admin username (no `azureuser` if your policy forbids).')
 param adminUsername string
 
+
 @description('SSH public key contents (e.g., from ~/.ssh/id_rsa.pub).')
 param adminPublicKey string
 
 @description('VNet address space in CIDR notation')
 param vnetAddressPrefix string = '10.0.0.0/16'
+
 
 @description('Subnet address prefix in CIDR notation')
 param subnetPrefix string = '10.0.1.0/24'
