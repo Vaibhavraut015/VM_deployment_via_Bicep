@@ -18,9 +18,8 @@ A hands-on project to deploy a **production-ready Linux VM** on Azure using **Bi
 - **Azure CLI** (2.58+). Install: https://learn.microsoft.com/cli/azure/install-azure-cli
 - Ensure Bicep is available via CLI: `az bicep install` (one time)
 - A resource group name (e.g., `rg-vm-demo`) and location (e.g., `eastus`)
-- An SSH public key on your machine (usually at `~/.ssh/id_rsa.pub` or `~/.ssh/id_ed25519.pub`)
-
----
+- An SSH public key on your machine
+- (usually at `~/.ssh/id_rsa.pub` or `~/.ssh/id_ed25519.pub`)
 
 ## Quick Start
 
@@ -45,9 +44,7 @@ az network public-ip list -g rg-vm-demo --query "[0].ipAddress" -o tsv
 
 # 7) SSH in (example)
 ssh <adminUsername>@<PublicIP>
-```
 
----
 
 ## Architecture
 - **VNet**: 10.0.0.0/16
@@ -57,13 +54,11 @@ ssh <adminUsername>@<PublicIP>
 - **NIC**: Attached to subnet + NSG
 - **VM**: Ubuntu 22.04 LTS (Gen2), Standard_B1s by default, SSH key only
 
----
 
 ## Cost Notes
 - Using `Standard_B1s` + `StandardSSD_LRS` keeps cost low for demos.
 - Stop or delete the VM when not in use. Use `cleanup.sh`/`cleanup.ps1` to remove the entire stack.
 
----
 
 ## Windows VM Option
 If you prefer Windows Server (with RDP/3389), you can:
@@ -73,7 +68,6 @@ If you prefer Windows Server (with RDP/3389), you can:
 
 Reach out if you want me to generate a Windows-specific variant for you.
 
----
 
 ## Files & Commands Reference
 ```text
@@ -87,6 +81,3 @@ azure-vm-deployment-project/
 ├─ cleanup.sh
 ├─ cleanup.ps1
 └─ Project-Report-VM-Deployment.docx
-```
-
-**Happy building!**
